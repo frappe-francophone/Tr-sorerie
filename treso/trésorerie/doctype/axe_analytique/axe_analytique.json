@@ -1,0 +1,54 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-07-30 14:06:58.088976",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "libelle",
+  "type",
+  "correspondance"
+ ],
+ "fields": [
+  {
+   "fieldname": "libelle",
+   "fieldtype": "Data",
+   "label": "Libelle"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "Axe 1\nAxe 2\nAxe 3\nAxe 4\nAxe 5\nAxe 6\nAxe 7\nAxe 8\nAxe 9\nAxe 10"
+  },
+  {
+   "fieldname": "correspondance",
+   "fieldtype": "Data",
+   "label": "Correspondance"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-07-30 14:12:03.179140",
+ "modified_by": "Administrator",
+ "module": "Tr\u00e9sorerie",
+ "name": "Axe Analytique",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,113 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-07-17 15:12:17.589854",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "code",
+  "intitule",
+  "collectif",
+  "societe",
+  "column_break_vfvg",
+  "type",
+  "email",
+  "telephone",
+  "section_break_6gkv",
+  "adresse",
+  "column_break_lukp",
+  "autre_info"
+ ],
+ "fields": [
+  {
+   "fieldname": "code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Code",
+   "reqd": 1
+  },
+  {
+   "fieldname": "intitule",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "intitule",
+   "reqd": 1
+  },
+  {
+   "fieldname": "collectif",
+   "fieldtype": "Link",
+   "label": "Collectif",
+   "options": "Compte General",
+   "reqd": 1
+  },
+  {
+   "fieldname": "societe",
+   "fieldtype": "Link",
+   "label": "societe",
+   "options": "Societe"
+  },
+  {
+   "fieldname": "column_break_vfvg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "AUTRES\nSALARIE\nFOURNISSEUR\nCLIENT\nTIERS DIVERS",
+   "reqd": 1
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fieldname": "telephone",
+   "fieldtype": "Data",
+   "label": "Telephone"
+  },
+  {
+   "fieldname": "section_break_6gkv",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "adresse",
+   "fieldtype": "Text",
+   "label": "Adresse"
+  },
+  {
+   "fieldname": "column_break_lukp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "autre_info",
+   "fieldtype": "Text",
+   "label": "Autre Info"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-07-17 15:22:56.962010",
+ "modified_by": "Administrator",
+ "module": "Tr\u00e9sorerie",
+ "name": "Tiers",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

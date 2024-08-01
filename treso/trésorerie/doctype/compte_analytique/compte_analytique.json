@@ -1,0 +1,72 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-07-17 16:29:28.598012",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "compte",
+  "designation",
+  "categorie",
+  "section",
+  "type",
+  "societe"
+ ],
+ "fields": [
+  {
+   "fieldname": "compte",
+   "fieldtype": "Data",
+   "label": "Compte"
+  },
+  {
+   "fieldname": "designation",
+   "fieldtype": "Data",
+   "label": "Designation"
+  },
+  {
+   "fieldname": "categorie",
+   "fieldtype": "Select",
+   "label": "categorie"
+  },
+  {
+   "fieldname": "section",
+   "fieldtype": "Link",
+   "label": "section",
+   "options": "Section Analytique"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Data",
+   "label": "type"
+  },
+  {
+   "fieldname": "societe",
+   "fieldtype": "Long Text",
+   "label": "Societe"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-07-17 16:37:52.926037",
+ "modified_by": "Administrator",
+ "module": "Tr\u00e9sorerie",
+ "name": "Compte Analytique",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

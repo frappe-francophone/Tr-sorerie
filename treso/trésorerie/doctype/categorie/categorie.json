@@ -1,0 +1,48 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-07-22 14:22:22.063986",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "categorie",
+  "classe"
+ ],
+ "fields": [
+  {
+   "fieldname": "categorie",
+   "fieldtype": "Data",
+   "label": "Categorie"
+  },
+  {
+   "fieldname": "classe",
+   "fieldtype": "Select",
+   "label": "Classe",
+   "options": "01\n02\n03\n04\n05\n06\n07\n08\n09\n10"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-07-30 12:51:31.811889",
+ "modified_by": "Administrator",
+ "module": "Tr\u00e9sorerie",
+ "name": "Categorie",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

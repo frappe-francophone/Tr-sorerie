@@ -1,0 +1,75 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-07-17 14:19:07.284826",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "compte",
+  "designation",
+  "ventilable",
+  "collectif",
+  "controle",
+  "societe"
+ ],
+ "fields": [
+  {
+   "fieldname": "compte",
+   "fieldtype": "Link",
+   "label": "Compte",
+   "options": "Account"
+  },
+  {
+   "fieldname": "designation",
+   "fieldtype": "Data",
+   "label": "Designation"
+  },
+  {
+   "default": "0",
+   "fieldname": "ventilable",
+   "fieldtype": "Check",
+   "label": "Ventilable"
+  },
+  {
+   "default": "0",
+   "fieldname": "collectif",
+   "fieldtype": "Check",
+   "label": "Collectif"
+  },
+  {
+   "fieldname": "controle",
+   "fieldtype": "Data",
+   "label": "controle"
+  },
+  {
+   "fieldname": "societe",
+   "fieldtype": "Link",
+   "label": "Societe",
+   "options": "Societe"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-07-22 14:24:04.996485",
+ "modified_by": "Administrator",
+ "module": "Tr\u00e9sorerie",
+ "name": "Compte General",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

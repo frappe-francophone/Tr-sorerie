@@ -1,0 +1,118 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-07-30 12:01:52.198718",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "compte",
+  "cours",
+  "montant",
+  "type",
+  "tiers",
+  "compte_analytique",
+  "compte_analytique_2",
+  "compte_analytique_3",
+  "compte_analytique_4",
+  "compte_analytique_5",
+  "sens",
+  "nature",
+  "control",
+  "flag"
+ ],
+ "fields": [
+  {
+   "fieldname": "compte",
+   "fieldtype": "Link",
+   "label": "Compte",
+   "options": "Compte General"
+  },
+  {
+   "fieldname": "cours",
+   "fieldtype": "Float",
+   "label": "Cours"
+  },
+  {
+   "fieldname": "montant",
+   "fieldtype": "Currency",
+   "label": "Montant"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Data",
+   "label": "Type"
+  },
+  {
+   "fieldname": "tiers",
+   "fieldtype": "Link",
+   "label": "Tiers",
+   "options": "Tiers"
+  },
+  {
+   "fieldname": "compte_analytique",
+   "fieldtype": "Link",
+   "label": "Compte Analytique",
+   "options": "Section Analytique"
+  },
+  {
+   "fieldname": "compte_analytique_2",
+   "fieldtype": "Link",
+   "label": "Compte Analytique 2",
+   "options": "Section Analytique"
+  },
+  {
+   "fieldname": "compte_analytique_3",
+   "fieldtype": "Link",
+   "label": "Compte Analytique 3",
+   "options": "Section Analytique"
+  },
+  {
+   "fieldname": "compte_analytique_4",
+   "fieldtype": "Link",
+   "label": "Compte Analytique 4",
+   "options": "Section Analytique"
+  },
+  {
+   "fieldname": "compte_analytique_5",
+   "fieldtype": "Link",
+   "label": "Compte Analytique 5",
+   "options": "Section Analytique"
+  },
+  {
+   "fieldname": "sens",
+   "fieldtype": "Select",
+   "label": "Sens",
+   "options": "Debit\nCredit"
+  },
+  {
+   "fieldname": "nature",
+   "fieldtype": "Link",
+   "label": "Nature",
+   "options": "Nature Operations"
+  },
+  {
+   "fieldname": "control",
+   "fieldtype": "Data",
+   "label": "Control"
+  },
+  {
+   "default": "0",
+   "fieldname": "flag",
+   "fieldtype": "Check",
+   "label": "Flag"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-07-30 12:09:17.748167",
+ "modified_by": "Administrator",
+ "module": "Tr\u00e9sorerie",
+ "name": "Comptabilisation",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

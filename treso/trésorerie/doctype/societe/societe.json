@@ -1,0 +1,157 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-07-17 14:07:06.209980",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "raison_sociale",
+  "ville",
+  "commune",
+  "telephone",
+  "email",
+  "site_web",
+  "adresse",
+  "logo",
+  "column_break_abt1",
+  "devise_de_base",
+  "devise_secondaire",
+  "base_comptable",
+  "format_impression",
+  "billetage",
+  "billetage_operation",
+  "billetage_encaissement",
+  "comptabilite_erpnext",
+  "comptabilite_tab",
+  "compte__arrondi"
+ ],
+ "fields": [
+  {
+   "fieldname": "raison_sociale",
+   "fieldtype": "Data",
+   "label": "Raison Sociale"
+  },
+  {
+   "fieldname": "ville",
+   "fieldtype": "Data",
+   "label": "Ville"
+  },
+  {
+   "fieldname": "commune",
+   "fieldtype": "Data",
+   "label": "Commune"
+  },
+  {
+   "fieldname": "telephone",
+   "fieldtype": "Phone",
+   "label": "Telephone"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fieldname": "site_web",
+   "fieldtype": "Data",
+   "label": "Site Web"
+  },
+  {
+   "fieldname": "adresse",
+   "fieldtype": "Data",
+   "label": "Adresse"
+  },
+  {
+   "fieldname": "logo",
+   "fieldtype": "Attach Image",
+   "label": "Logo"
+  },
+  {
+   "fieldname": "column_break_abt1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "devise_de_base",
+   "fieldtype": "Link",
+   "label": "Devise de Base",
+   "options": "Devise"
+  },
+  {
+   "fieldname": "devise_secondaire",
+   "fieldtype": "Link",
+   "label": "Devise Secondaire",
+   "options": "Devise"
+  },
+  {
+   "fieldname": "base_comptable",
+   "fieldtype": "Select",
+   "label": "Base Comptable",
+   "options": "Ligne 100\nLigne 1000\nSage X3"
+  },
+  {
+   "fieldname": "format_impression",
+   "fieldtype": "Select",
+   "label": "Format Impression",
+   "options": "A4\nA5"
+  },
+  {
+   "default": "0",
+   "fieldname": "billetage",
+   "fieldtype": "Check",
+   "label": "Billetage"
+  },
+  {
+   "default": "0",
+   "fieldname": "billetage_operation",
+   "fieldtype": "Check",
+   "label": "Billetage Operation"
+  },
+  {
+   "default": "0",
+   "fieldname": "billetage_encaissement",
+   "fieldtype": "Check",
+   "label": "Billetage Encaissement"
+  },
+  {
+   "default": "0",
+   "fieldname": "comptabilite_erpnext",
+   "fieldtype": "Check",
+   "label": "Comptabilite Erpnext"
+  },
+  {
+   "fieldname": "comptabilite_tab",
+   "fieldtype": "Tab Break",
+   "label": "Comptabilite"
+  },
+  {
+   "fieldname": "compte__arrondi",
+   "fieldtype": "Link",
+   "label": "Compte Arrondi",
+   "options": "Compte General"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-07-17 14:35:12.801619",
+ "modified_by": "Administrator",
+ "module": "Tr\u00e9sorerie",
+ "name": "Societe",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

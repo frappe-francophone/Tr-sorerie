@@ -1,0 +1,210 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-07-22 14:56:05.463191",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "societe",
+  "code_caisse",
+  "code_journal",
+  "designation",
+  "devise",
+  "column_break_0ngm",
+  "site",
+  "compte_comptable",
+  "type_caisse",
+  "date_lencement",
+  "cours",
+  "section_break_gslp",
+  "solde_plancher",
+  "column_break_imy8",
+  "delta_plancher",
+  "column_break_vace",
+  "solde_initial",
+  "date_solde",
+  "solde",
+  "initialisation_section",
+  "billetage",
+  "amended_from",
+  "section_break_l6o0",
+  "column_break_mfxq",
+  "column_break_zw2j",
+  "total"
+ ],
+ "fields": [
+  {
+   "fieldname": "societe",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Societe",
+   "options": "Societe",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Caisse",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "code_caisse",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Code Caisse",
+   "reqd": 1
+  },
+  {
+   "fieldname": "code_journal",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Code Journal",
+   "options": "Journal",
+   "reqd": 1
+  },
+  {
+   "fieldname": "designation",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Designation",
+   "reqd": 1
+  },
+  {
+   "fieldname": "devise",
+   "fieldtype": "Link",
+   "label": "Devise",
+   "options": "Devise"
+  },
+  {
+   "fieldname": "column_break_0ngm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "site",
+   "fieldtype": "Link",
+   "label": "Site",
+   "options": "Branch",
+   "reqd": 1
+  },
+  {
+   "fieldname": "compte_comptable",
+   "fieldtype": "Link",
+   "label": "Compte Comptable",
+   "options": "Compte General"
+  },
+  {
+   "fieldname": "type_caisse",
+   "fieldtype": "Select",
+   "label": "Type Caisse",
+   "options": "Caisse\nBanque",
+   "sort_options": 1
+  },
+  {
+   "fieldname": "date_lencement",
+   "fieldtype": "Date",
+   "label": "Date Lencement",
+   "reqd": 1
+  },
+  {
+   "fieldname": "cours",
+   "fieldtype": "Float",
+   "label": "Cours"
+  },
+  {
+   "fieldname": "section_break_gslp",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "solde_plancher",
+   "fieldtype": "Float",
+   "label": "Solde Plancher"
+  },
+  {
+   "fieldname": "column_break_imy8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "delta_plancher",
+   "fieldtype": "Float",
+   "label": "Delta Plancher"
+  },
+  {
+   "fieldname": "column_break_vace",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "solde_initial",
+   "fieldtype": "Float",
+   "label": "Solde Initial",
+   "reqd": 1
+  },
+  {
+   "fieldname": "date_solde",
+   "fieldtype": "Date",
+   "label": "Date Solde"
+  },
+  {
+   "fieldname": "solde",
+   "fieldtype": "Float",
+   "label": "Solde"
+  },
+  {
+   "fieldname": "initialisation_section",
+   "fieldtype": "Section Break",
+   "label": "Initialisation"
+  },
+  {
+   "fieldname": "billetage",
+   "fieldtype": "Table",
+   "label": "Billetage",
+   "options": "Billetage"
+  },
+  {
+   "fieldname": "section_break_l6o0",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_mfxq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_zw2j",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total",
+   "fieldtype": "Currency",
+   "label": "Total"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-07-23 07:42:08.810343",
+ "modified_by": "Administrator",
+ "module": "Tr\u00e9sorerie",
+ "name": "Caisse",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

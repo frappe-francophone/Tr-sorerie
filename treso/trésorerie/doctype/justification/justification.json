@@ -1,0 +1,162 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-07-30 20:40:13.829332",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "societe",
+  "operation",
+  "column_break_txhs",
+  "site",
+  "caisse",
+  "section_break_zfnw",
+  "date",
+  "designation",
+  "montant",
+  "entite",
+  "reference",
+  "column_break_vqug",
+  "remettant",
+  "devise",
+  "commentaire",
+  "section_break_kkvu",
+  "details_operation_de_caisse",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Justification",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "societe",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Societe",
+   "options": "Societe",
+   "reqd": 1
+  },
+  {
+   "fieldname": "operation",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Op\u00e9ration \u00e0 Justifier",
+   "options": "Caisse",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_txhs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "site",
+   "fieldtype": "Link",
+   "label": "Site",
+   "options": "Branch",
+   "reqd": 1
+  },
+  {
+   "fieldname": "caisse",
+   "fieldtype": "Data",
+   "label": "Caisse",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_zfnw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "designation",
+   "fieldtype": "Data",
+   "label": "Designation",
+   "reqd": 1
+  },
+  {
+   "fieldname": "montant",
+   "fieldtype": "Currency",
+   "label": "Montant",
+   "options": "devise",
+   "reqd": 1
+  },
+  {
+   "fieldname": "entite",
+   "fieldtype": "Data",
+   "label": "Entite"
+  },
+  {
+   "fieldname": "reference",
+   "fieldtype": "Data",
+   "label": "Reference"
+  },
+  {
+   "fieldname": "column_break_vqug",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "remettant",
+   "fieldtype": "Data",
+   "label": "Remettant",
+   "reqd": 1
+  },
+  {
+   "fieldname": "devise",
+   "fieldtype": "Currency",
+   "label": "Devise",
+   "reqd": 1
+  },
+  {
+   "fieldname": "commentaire",
+   "fieldtype": "Text",
+   "label": "Commentaire"
+  },
+  {
+   "fieldname": "section_break_kkvu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "details_operation_de_caisse",
+   "fieldtype": "Table",
+   "label": " Details Operation de Caisse",
+   "options": "Details Operation de Caisse"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-07-30 20:50:27.916931",
+ "modified_by": "Administrator",
+ "module": "Tr\u00e9sorerie",
+ "name": "Justification",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

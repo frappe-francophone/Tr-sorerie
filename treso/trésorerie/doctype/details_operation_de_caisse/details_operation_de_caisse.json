@@ -1,0 +1,235 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-07-22 14:28:54.528710",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "nature_operations",
+  "type_tiers",
+  "tiers",
+  "column_break_rd6u",
+  "demande_paiement",
+  "montant_devise",
+  "montant_devise_ref",
+  "section_analytique_section",
+  "imputation_analytique",
+  "imputation_analytique_2",
+  "imputation_analytique_3",
+  "imputation_analytique_4",
+  "imputation_analytique_5",
+  "column_break_fhqa",
+  "imputation_analytique_6",
+  "imputation_analytique_7",
+  "imputation_analytique_8",
+  "imputation_analytique_9",
+  "imputation_analytique_10",
+  "section_break_bgr5",
+  "is_justifiable",
+  "label",
+  "label_2",
+  "label_3",
+  "label_4",
+  "label_5",
+  "column_break_7baz",
+  "is_tiers",
+  "label_6",
+  "label_7",
+  "label_8",
+  "label_9",
+  "label_10"
+ ],
+ "fields": [
+  {
+   "fieldname": "type_tiers",
+   "fieldtype": "Select",
+   "label": "Type Tiers",
+   "options": "\nClient\nEmploye\nFournisseur"
+  },
+  {
+   "fieldname": "nature_operations",
+   "fieldtype": "Link",
+   "label": "Nature Operations",
+   "options": "Nature Operations"
+  },
+  {
+   "fieldname": "tiers",
+   "fieldtype": "Link",
+   "label": "Tiers",
+   "options": "Tiers"
+  },
+  {
+   "fieldname": "column_break_rd6u",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "demande_paiement",
+   "fieldtype": "Link",
+   "label": "Demande Paiement",
+   "options": "Demande Paiement"
+  },
+  {
+   "fieldname": "montant_devise",
+   "fieldtype": "Currency",
+   "label": "Montant Devise",
+   "options": "devise"
+  },
+  {
+   "fieldname": "montant_devise_ref",
+   "fieldtype": "Currency",
+   "label": "Montant Devise Ref",
+   "options": "devise_caisse"
+  },
+  {
+   "fieldname": "section_analytique_section",
+   "fieldtype": "Section Break",
+   "label": "Section Analytique"
+  },
+  {
+   "fieldname": "imputation_analytique",
+   "fieldtype": "Link",
+   "label": "Imputation Analytique",
+   "options": "Section Analytique"
+  },
+  {
+   "fieldname": "imputation_analytique_2",
+   "fieldtype": "Link",
+   "label": "Imputation Analytique 2",
+   "options": "Section Analytique"
+  },
+  {
+   "fieldname": "imputation_analytique_3",
+   "fieldtype": "Link",
+   "label": "Imputation Analytique 3",
+   "options": "Section Analytique"
+  },
+  {
+   "fieldname": "imputation_analytique_4",
+   "fieldtype": "Link",
+   "label": "Imputation Analytique 4",
+   "options": "Section Analytique"
+  },
+  {
+   "fieldname": "imputation_analytique_5",
+   "fieldtype": "Link",
+   "label": "Imputation Analytique 5",
+   "options": "Section Analytique"
+  },
+  {
+   "fieldname": "column_break_fhqa",
+   "fieldtype": "Column Break",
+   "options": "Section Analytique"
+  },
+  {
+   "fieldname": "imputation_analytique_6",
+   "fieldtype": "Link",
+   "label": "Imputation Analytique 6",
+   "options": "Section Analytique"
+  },
+  {
+   "fieldname": "imputation_analytique_7",
+   "fieldtype": "Link",
+   "label": "Imputation Analytique 7",
+   "options": "Section Analytique"
+  },
+  {
+   "fieldname": "imputation_analytique_8",
+   "fieldtype": "Link",
+   "label": "Imputation Analytique 8",
+   "options": "Section Analytique"
+  },
+  {
+   "fieldname": "imputation_analytique_9",
+   "fieldtype": "Link",
+   "label": "Imputation Analytique 9",
+   "options": "Section Analytique"
+  },
+  {
+   "fieldname": "imputation_analytique_10",
+   "fieldtype": "Link",
+   "label": "Imputation Analytique 10",
+   "options": "Section Analytique"
+  },
+  {
+   "fieldname": "is_justifiable",
+   "fieldtype": "Data",
+   "label": "Is Justifiable"
+  },
+  {
+   "fieldname": "is_tiers",
+   "fieldtype": "Data",
+   "label": "Is Tiers"
+  },
+  {
+   "fieldname": "label",
+   "fieldtype": "Data",
+   "label": "Label"
+  },
+  {
+   "fieldname": "label_2",
+   "fieldtype": "Data",
+   "label": "Label 2"
+  },
+  {
+   "fieldname": "label_3",
+   "fieldtype": "Data",
+   "label": "Label 3"
+  },
+  {
+   "fieldname": "label_4",
+   "fieldtype": "Data",
+   "label": "Label 4"
+  },
+  {
+   "fieldname": "label_5",
+   "fieldtype": "Data",
+   "label": "Label 5"
+  },
+  {
+   "fieldname": "label_6",
+   "fieldtype": "Data",
+   "label": "Label 6"
+  },
+  {
+   "fieldname": "label_7",
+   "fieldtype": "Data",
+   "label": "Label 7"
+  },
+  {
+   "fieldname": "label_8",
+   "fieldtype": "Data",
+   "label": "Label 8"
+  },
+  {
+   "fieldname": "label_9",
+   "fieldtype": "Data",
+   "label": "Label 9"
+  },
+  {
+   "fieldname": "label_10",
+   "fieldtype": "Data",
+   "label": "Label 10"
+  },
+  {
+   "fieldname": "section_break_bgr5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_7baz",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-07-30 10:37:14.337382",
+ "modified_by": "Administrator",
+ "module": "Tr\u00e9sorerie",
+ "name": "Details Operation de Caisse",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

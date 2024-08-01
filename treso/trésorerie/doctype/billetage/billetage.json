@@ -1,0 +1,67 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-07-17 15:01:54.218960",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "nom",
+  "unite",
+  "image",
+  "nombre_initial",
+  "valeur_initiale",
+  "nombre_final",
+  "valeur_finale"
+ ],
+ "fields": [
+  {
+   "fieldname": "nom",
+   "fieldtype": "Data",
+   "label": "Nom"
+  },
+  {
+   "fieldname": "unite",
+   "fieldtype": "Data",
+   "label": "unite"
+  },
+  {
+   "fieldname": "image",
+   "fieldtype": "Image",
+   "label": "image"
+  },
+  {
+   "fieldname": "nombre_initial",
+   "fieldtype": "Int",
+   "label": "nombre initial"
+  },
+  {
+   "fieldname": "valeur_initiale",
+   "fieldtype": "Currency",
+   "label": "valeur initiale",
+   "options": "devise"
+  },
+  {
+   "fieldname": "nombre_final",
+   "fieldtype": "Int",
+   "label": "nombre final"
+  },
+  {
+   "fieldname": "valeur_finale",
+   "fieldtype": "Currency",
+   "label": "valeur finale",
+   "options": "devise"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-07-17 15:08:07.472059",
+ "modified_by": "Administrator",
+ "module": "Tr\u00e9sorerie",
+ "name": "Billetage",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

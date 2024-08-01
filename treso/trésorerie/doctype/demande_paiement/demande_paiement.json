@@ -1,0 +1,179 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-07-22 14:51:13.667550",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "societe",
+  "column_break_wu2m",
+  "site",
+  "column_break_bdik",
+  "department",
+  "section_break_iu8b",
+  "date",
+  "designation",
+  "montant",
+  "entite",
+  "reference",
+  "positione",
+  "caisse",
+  "column_break_swhg",
+  "amended_from",
+  "site_sup\u00e9rieur",
+  "type_operation",
+  "devise",
+  "beneficiaire",
+  "commentaire",
+  "section_break_tlrr"
+ ],
+ "fields": [
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Demande Paiement",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "societe",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Societe",
+   "options": "Societe",
+   "reqd": 1
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "designation",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Designation",
+   "reqd": 1
+  },
+  {
+   "fieldname": "montant",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Montant",
+   "options": "devise",
+   "reqd": 1
+  },
+  {
+   "fieldname": "entite",
+   "fieldtype": "Data",
+   "label": "Entite"
+  },
+  {
+   "fieldname": "reference",
+   "fieldtype": "Data",
+   "label": "Reference"
+  },
+  {
+   "default": "0",
+   "fieldname": "positione",
+   "fieldtype": "Check",
+   "label": "positione"
+  },
+  {
+   "fieldname": "caisse",
+   "fieldtype": "Link",
+   "label": "Caisse",
+   "options": "Caisse"
+  },
+  {
+   "fieldname": "column_break_swhg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "site",
+   "fieldtype": "Link",
+   "label": "Site",
+   "options": "Branch",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_wu2m",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_bdik",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "section_break_iu8b",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "site_sup\u00e9rieur",
+   "fieldtype": "Data",
+   "label": "Site Sup\u00e9rieur"
+  },
+  {
+   "fieldname": "type_operation",
+   "fieldtype": "Data",
+   "label": "Type Operation"
+  },
+  {
+   "fieldname": "devise",
+   "fieldtype": "Link",
+   "label": "Devise",
+   "options": "Devise"
+  },
+  {
+   "fieldname": "beneficiaire",
+   "fieldtype": "Data",
+   "label": "Beneficiaire"
+  },
+  {
+   "fieldname": "commentaire",
+   "fieldtype": "Text",
+   "label": "Commentaire"
+  },
+  {
+   "fieldname": "section_break_tlrr",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-07-23 07:53:27.687982",
+ "modified_by": "Administrator",
+ "module": "Tr\u00e9sorerie",
+ "name": "Demande Paiement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

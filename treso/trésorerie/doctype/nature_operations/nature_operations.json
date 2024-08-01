@@ -1,0 +1,124 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-07-22 14:30:54.650571",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "societe",
+  "type_operation",
+  "nature",
+  "compte_comptable",
+  "column_break_nzwc",
+  "tiers",
+  "justifiable",
+  "famille",
+  "section_break_x6vp",
+  "solde_initial",
+  "column_break_hze7",
+  "retour_caisse",
+  "column_break_ndxm",
+  "echange"
+ ],
+ "fields": [
+  {
+   "fieldname": "societe",
+   "fieldtype": "Link",
+   "label": "Societe",
+   "options": "Societe"
+  },
+  {
+   "fieldname": "type_operation",
+   "fieldtype": "Select",
+   "label": "Type Operation",
+   "options": "Encaissement\nD\u00e9caissement"
+  },
+  {
+   "fieldname": "nature",
+   "fieldtype": "Data",
+   "label": "Nature"
+  },
+  {
+   "fieldname": "compte_comptable",
+   "fieldtype": "Link",
+   "label": "Compte Comptable",
+   "options": "Compte General"
+  },
+  {
+   "fieldname": "column_break_nzwc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tiers",
+   "fieldtype": "Select",
+   "label": "Tiers",
+   "options": "Oui\nNon"
+  },
+  {
+   "fieldname": "justifiable",
+   "fieldtype": "Select",
+   "label": "Justifiable",
+   "options": "Oui\nNon"
+  },
+  {
+   "fieldname": "famille",
+   "fieldtype": "Link",
+   "label": "Famille",
+   "options": "Famille"
+  },
+  {
+   "fieldname": "section_break_x6vp",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "solde_initial",
+   "fieldtype": "Check",
+   "label": "Solde Initial"
+  },
+  {
+   "fieldname": "column_break_hze7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "retour_caisse",
+   "fieldtype": "Check",
+   "label": "Retour Caisse"
+  },
+  {
+   "fieldname": "column_break_ndxm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "echange",
+   "fieldtype": "Check",
+   "label": "Echange"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-07-22 14:45:23.469074",
+ "modified_by": "Administrator",
+ "module": "Tr\u00e9sorerie",
+ "name": "Nature Operations",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

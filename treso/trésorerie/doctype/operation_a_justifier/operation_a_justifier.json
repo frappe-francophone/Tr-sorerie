@@ -1,0 +1,146 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-07-30 22:06:07.310311",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "operation",
+  "section_break_ipzz",
+  "date",
+  "designation",
+  "montant",
+  "entite",
+  "reference",
+  "a_justifier",
+  "column_break_rru1",
+  "type_operation",
+  "remettant",
+  "devise",
+  "commentaire",
+  "code_type",
+  "section_break_2vhb",
+  "details_operation_de_caisse",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_ipzz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Operation a Justifier",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "operation",
+   "fieldtype": "Link",
+   "label": "operation",
+   "options": "Operation de Caisse"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "designation",
+   "fieldtype": "Data",
+   "label": "Designation"
+  },
+  {
+   "fieldname": "montant",
+   "fieldtype": "Currency",
+   "label": "Montant"
+  },
+  {
+   "fieldname": "entite",
+   "fieldtype": "Data",
+   "label": "Entite"
+  },
+  {
+   "default": "0",
+   "fieldname": "a_justifier",
+   "fieldtype": "Check",
+   "label": "A Justifier"
+  },
+  {
+   "fieldname": "type_operation",
+   "fieldtype": "Select",
+   "label": "Type Operation",
+   "options": "Encaissement\nDecaissement"
+  },
+  {
+   "fieldname": "remettant",
+   "fieldtype": "Data",
+   "label": "Remettant"
+  },
+  {
+   "fieldname": "devise",
+   "fieldtype": "Link",
+   "label": "Devise",
+   "options": "Devise"
+  },
+  {
+   "fieldname": "commentaire",
+   "fieldtype": "Text",
+   "label": "Commentaire"
+  },
+  {
+   "fieldname": "code_type",
+   "fieldtype": "Data",
+   "label": "Code Type"
+  },
+  {
+   "fieldname": "details_operation_de_caisse",
+   "fieldtype": "Link",
+   "label": "Details Operation de Caisse",
+   "options": "Details Operation de Caisse"
+  },
+  {
+   "fieldname": "reference",
+   "fieldtype": "Data",
+   "label": "Reference"
+  },
+  {
+   "fieldname": "column_break_rru1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_2vhb",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-07-30 22:16:26.142912",
+ "modified_by": "Administrator",
+ "module": "Tr\u00e9sorerie",
+ "name": "Operation a Justifier",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

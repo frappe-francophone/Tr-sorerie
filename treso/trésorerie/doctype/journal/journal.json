@@ -1,0 +1,103 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:code",
+ "creation": "2024-07-22 15:03:08.719606",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "code",
+  "libelle",
+  "compte_general",
+  "societe",
+  "column_break_7efd",
+  "premier_numero",
+  "prefixe",
+  "annee",
+  "mois"
+ ],
+ "fields": [
+  {
+   "fieldname": "code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Code",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "libelle",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Libelle",
+   "reqd": 1
+  },
+  {
+   "fieldname": "compte_general",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Compte General",
+   "options": "Compte General",
+   "reqd": 1
+  },
+  {
+   "fieldname": "societe",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Societe",
+   "options": "Societe",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_7efd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "premier_numero",
+   "fieldtype": "Data",
+   "label": "Premier Numero"
+  },
+  {
+   "fieldname": "prefixe",
+   "fieldtype": "Data",
+   "label": "Pr\u00e9fixe"
+  },
+  {
+   "fieldname": "annee",
+   "fieldtype": "Int",
+   "label": "Annee"
+  },
+  {
+   "fieldname": "mois",
+   "fieldtype": "Int",
+   "label": "Mois"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-07-31 18:57:00.524540",
+ "modified_by": "Administrator",
+ "module": "Tr\u00e9sorerie",
+ "name": "Journal",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "libelle"
+}

@@ -1,0 +1,202 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-07-30 16:17:52.338738",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "societe",
+  "caisse",
+  "libelle",
+  "date_initiasation",
+  "initialisation",
+  "column_break_5hih",
+  "site",
+  "status",
+  "devise",
+  "date_fermeture",
+  "cours",
+  "section_break_eoqp",
+  "solde_initial",
+  "column_break_dhos",
+  "solde_final",
+  "billetage_sectio_tab",
+  "billetage",
+  "total",
+  "compte",
+  "journal",
+  "solde_plancher",
+  "delta_plancher",
+  "type_caisse",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "societe",
+   "fieldtype": "Link",
+   "label": "Societe",
+   "options": "Societe"
+  },
+  {
+   "fieldname": "caisse",
+   "fieldtype": "Link",
+   "label": "Caisse",
+   "options": "Caisse"
+  },
+  {
+   "fieldname": "libelle",
+   "fieldtype": "Data",
+   "label": "D\u00e9signation",
+   "no_copy": 1,
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "date_initiasation",
+   "fieldtype": "Datetime",
+   "label": "Date Initialisation"
+  },
+  {
+   "default": "0",
+   "fieldname": "initialisation",
+   "fieldtype": "Check",
+   "label": "Initialisation"
+  },
+  {
+   "fieldname": "column_break_5hih",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "site",
+   "fieldtype": "Link",
+   "label": "Site",
+   "options": "Branch"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Vert\nJaune\nRouge"
+  },
+  {
+   "fieldname": "devise",
+   "fieldtype": "Link",
+   "label": "Devise",
+   "options": "Devise"
+  },
+  {
+   "fieldname": "date_fermeture",
+   "fieldtype": "Datetime",
+   "label": "Date fermeture"
+  },
+  {
+   "fieldname": "cours",
+   "fieldtype": "Float",
+   "label": "Cours"
+  },
+  {
+   "fieldname": "section_break_eoqp",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "solde_initial",
+   "fieldtype": "Currency",
+   "label": "Solde Initial",
+   "options": "devise"
+  },
+  {
+   "fieldname": "column_break_dhos",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "solde_final",
+   "fieldtype": "Currency",
+   "label": "Solde Final",
+   "options": "devise"
+  },
+  {
+   "fieldname": "billetage_sectio_tab",
+   "fieldtype": "Tab Break",
+   "label": "Ferm\u00e9ture"
+  },
+  {
+   "fieldname": "billetage",
+   "fieldtype": "Table",
+   "label": "Billetage",
+   "options": "Billetage"
+  },
+  {
+   "fieldname": "total",
+   "fieldtype": "Float",
+   "label": "Total"
+  },
+  {
+   "fieldname": "compte",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Compte"
+  },
+  {
+   "fieldname": "journal",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Journal"
+  },
+  {
+   "fieldname": "solde_plancher",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Solde Plancher"
+  },
+  {
+   "fieldname": "delta_plancher",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Delta Plancher"
+  },
+  {
+   "fieldname": "type_caisse",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Type Caisse"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Caisse Initialisation",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-07-30 21:29:56.946725",
+ "modified_by": "Administrator",
+ "module": "Tr\u00e9sorerie",
+ "name": "Caisse Initialisation",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

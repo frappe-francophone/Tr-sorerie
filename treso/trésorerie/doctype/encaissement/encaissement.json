@@ -1,0 +1,259 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-07-30 20:26:13.996178",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "societe",
+  "caisse",
+  "initialisation",
+  "designation",
+  "montant",
+  "montant_reference",
+  "entite",
+  "reference",
+  "a_justifier",
+  "column_break_oahu",
+  "site",
+  "devise_caisse",
+  "date",
+  "type_operation",
+  "devise",
+  "cours",
+  "remettant",
+  "commentaire",
+  "section_break_yz9w",
+  "details_operation_de_caisse",
+  "justifie",
+  "compte",
+  "journal",
+  "comptabilisation_tab",
+  "comptabilisation",
+  "type_caisse",
+  "cours_societe",
+  "state",
+  "comptabilite_erpnext",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "societe",
+   "fieldtype": "Link",
+   "label": "Societe",
+   "options": "Societe",
+   "reqd": 1
+  },
+  {
+   "fieldname": "caisse",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Caisse ",
+   "no_copy": 1,
+   "options": "Caisse",
+   "print_hide": 1,
+   "read_only": 1,
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "initialisation",
+   "fieldtype": "Link",
+   "label": " No Initialisation",
+   "options": "Caisse Initialisation"
+  },
+  {
+   "fieldname": "designation",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": " Designation",
+   "reqd": 1
+  },
+  {
+   "fieldname": "montant",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Montant",
+   "options": "devise",
+   "reqd": 1
+  },
+  {
+   "fieldname": "montant_reference",
+   "fieldtype": "Currency",
+   "label": "Montant Reference",
+   "options": "devise_caisse"
+  },
+  {
+   "fieldname": "entite",
+   "fieldtype": "Data",
+   "label": "Entite"
+  },
+  {
+   "fieldname": "reference",
+   "fieldtype": "Data",
+   "label": "Reference"
+  },
+  {
+   "default": "0",
+   "fieldname": "a_justifier",
+   "fieldtype": "Check",
+   "label": "A Justifier"
+  },
+  {
+   "fieldname": "column_break_oahu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "site",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Site",
+   "options": "Branch",
+   "reqd": 1
+  },
+  {
+   "fieldname": "devise_caisse",
+   "fieldtype": "Link",
+   "label": "Devise Caisse",
+   "options": "Devise",
+   "reqd": 1
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "type_operation",
+   "fieldtype": "Date",
+   "label": "Type Operation"
+  },
+  {
+   "fieldname": "devise",
+   "fieldtype": "Link",
+   "label": "Devise",
+   "options": "Devise",
+   "reqd": 1
+  },
+  {
+   "fieldname": "cours",
+   "fieldtype": "Float",
+   "label": "Cours"
+  },
+  {
+   "fieldname": "remettant",
+   "fieldtype": "Data",
+   "label": "Remettant",
+   "reqd": 1
+  },
+  {
+   "fieldname": "commentaire",
+   "fieldtype": "Text",
+   "label": "Commentaire"
+  },
+  {
+   "fieldname": "section_break_yz9w",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "details_operation_de_caisse",
+   "fieldtype": "Table",
+   "label": "Details Operation de Caisse",
+   "options": "Details Operation de Caisse"
+  },
+  {
+   "default": "0",
+   "fieldname": "justifie",
+   "fieldtype": "Check",
+   "label": "Justifie"
+  },
+  {
+   "fieldname": "compte",
+   "fieldtype": "Data",
+   "label": "Compte"
+  },
+  {
+   "fieldname": "journal",
+   "fieldtype": "Data",
+   "label": "Journal"
+  },
+  {
+   "fieldname": "comptabilisation_tab",
+   "fieldtype": "Tab Break",
+   "label": "Comptabilisation"
+  },
+  {
+   "fieldname": "comptabilisation",
+   "fieldtype": "Table",
+   "options": "Comptabilisation"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Encaissement",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "type_caisse",
+   "fieldtype": "Data",
+   "label": "Type Caisse"
+  },
+  {
+   "fieldname": "cours_societe",
+   "fieldtype": "Float",
+   "label": "Cours Societe"
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Data",
+   "label": "state"
+  },
+  {
+   "default": "0",
+   "fieldname": "comptabilite_erpnext",
+   "fieldtype": "Check",
+   "label": "Comptabilite Erpnext"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Encaissement",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-07-30 20:36:00.160814",
+ "modified_by": "Administrator",
+ "module": "Tr\u00e9sorerie",
+ "name": "Encaissement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,89 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-07-17 14:33:38.314483",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "nom",
+  "designation",
+  "column_break_hzuz",
+  "symbole",
+  "centime",
+  "section_break_owub",
+  "billet",
+  "tab_break_sqvp",
+  "cours_devise"
+ ],
+ "fields": [
+  {
+   "fieldname": "nom",
+   "fieldtype": "Data",
+   "label": "Nom"
+  },
+  {
+   "fieldname": "designation",
+   "fieldtype": "Data",
+   "label": "Designation"
+  },
+  {
+   "fieldname": "column_break_hzuz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "symbole",
+   "fieldtype": "Data",
+   "label": "Symbole"
+  },
+  {
+   "fieldname": "centime",
+   "fieldtype": "Data",
+   "label": "centime"
+  },
+  {
+   "fieldname": "section_break_owub",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "billet",
+   "fieldtype": "Table",
+   "label": "Billets et Pi\u00e8ces",
+   "options": "Billet"
+  },
+  {
+   "fieldname": "tab_break_sqvp",
+   "fieldtype": "Tab Break",
+   "label": "Cours de la Devise"
+  },
+  {
+   "fieldname": "cours_devise",
+   "fieldtype": "Table",
+   "label": "Cours Devise",
+   "options": "Cours Devise"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-07-31 18:09:17.823666",
+ "modified_by": "Administrator",
+ "module": "Tr\u00e9sorerie",
+ "name": "Devise",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

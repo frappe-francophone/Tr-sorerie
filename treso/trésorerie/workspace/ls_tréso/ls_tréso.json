@@ -1,0 +1,236 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"vO7nEBSLbS\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">LS Tr\u00e9so</span>\",\"col\":12}},{\"id\":\"G0f3KZD1rS\",\"type\":\"card\",\"data\":{\"card_name\":\"Param\u00e9trages G\u00e9n\u00e9raux\",\"col\":3}},{\"id\":\"UOF6z-q8uY\",\"type\":\"card\",\"data\":{\"card_name\":\"Structures\",\"col\":3}},{\"id\":\"_zeG3M11t-\",\"type\":\"card\",\"data\":{\"card_name\":\"Comptabilit\u00e9\",\"col\":3}},{\"id\":\"0aCd_bPBUF\",\"type\":\"card\",\"data\":{\"card_name\":\"Operations des caisses\",\"col\":3}},{\"id\":\"0GrI8Zv4bn\",\"type\":\"card\",\"data\":{\"card_name\":\"Rapports\",\"col\":12}}]",
+ "creation": "2024-07-31 14:37:49.275739",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "money-coins-1",
+ "idx": 0,
+ "indicator_color": "blue",
+ "is_hidden": 0,
+ "label": "LS Tr\u00e9so",
+ "links": [
+  {
+   "description": "C'est ici qu'il faut parametrer tout ce qui est li\u00e9 \u00e0 la soci\u00e9t\u00e9",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Param\u00e9trages G\u00e9n\u00e9raux",
+   "link_count": 2,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Soci\u00e9t\u00e9",
+   "link_count": 0,
+   "link_to": "Societe",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Devise",
+   "link_count": 0,
+   "link_to": "Devise",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Comptabilit\u00e9",
+   "link_count": 5,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Plan Comptable",
+   "link_count": 0,
+   "link_to": "Compte General",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Axe Analytique",
+   "link_count": 0,
+   "link_to": "Axe Analytique",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Section Analytique",
+   "link_count": 0,
+   "link_to": "Section Analytique",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Tiers",
+   "link_count": 0,
+   "link_to": "Tiers",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Journaux",
+   "link_count": 0,
+   "link_to": "Journal",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Operations des caisses",
+   "link_count": 3,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Demande Paiement",
+   "link_count": 0,
+   "link_to": "Demande Paiement",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Op\u00e9rations",
+   "link_count": 0,
+   "link_to": "Caisse Initialisation",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Justification",
+   "link_count": 0,
+   "link_to": "Justification",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Rapports",
+   "link_count": 1,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Caisse",
+   "link_count": 0,
+   "link_to": "Caisse",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Structures",
+   "link_count": 5,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Caisse",
+   "link_count": 0,
+   "link_to": "Caisse",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Cat\u00e9gories",
+   "link_count": 0,
+   "link_to": "Categorie",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Famille des Natures",
+   "link_count": 0,
+   "link_to": "Famille",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Services",
+   "link_count": 0,
+   "link_to": "Service",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Natures",
+   "link_count": 0,
+   "link_to": "Nature Operations",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2024-07-31 14:57:35.447982",
+ "modified_by": "Administrator",
+ "module": "Tr\u00e9sorerie",
+ "name": "LS Tr\u00e9so",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 6.0,
+ "shortcuts": [],
+ "title": "LS Tr\u00e9so"
+}

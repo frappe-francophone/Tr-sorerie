@@ -1,0 +1,81 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-07-30 12:53:05.247397",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "state",
+  "branch",
+  "categorie",
+  "type_document",
+  "document",
+  "cle",
+  "valeur"
+ ],
+ "fields": [
+  {
+   "fieldname": "state",
+   "fieldtype": "Int",
+   "label": "State"
+  },
+  {
+   "fieldname": "type_document",
+   "fieldtype": "Link",
+   "label": "Type Document",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "document",
+   "fieldtype": "Dynamic Link",
+   "label": "Document",
+   "options": "type_document"
+  },
+  {
+   "fieldname": "branch",
+   "fieldtype": "Link",
+   "label": "Branch",
+   "options": "Branch"
+  },
+  {
+   "fieldname": "cle",
+   "fieldtype": "Data",
+   "label": "Cle"
+  },
+  {
+   "fieldname": "valeur",
+   "fieldtype": "Data",
+   "label": "Valeur"
+  },
+  {
+   "fieldname": "categorie",
+   "fieldtype": "Link",
+   "label": "Categorie",
+   "options": "Categorie"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-07-30 13:40:51.283069",
+ "modified_by": "Administrator",
+ "module": "Tr\u00e9sorerie",
+ "name": "Assignation",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
