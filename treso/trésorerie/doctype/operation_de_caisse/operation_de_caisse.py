@@ -12,7 +12,7 @@ import erpnext
 from erpnext.accounts.doctype.accounting_dimension.accounting_dimension import (
 	get_accounting_dimensions,
 )
-from ls_treso.ls_treso.doctype.devise.devise import get_cours
+from treso.trésorerie.doctype.devise.devise import get_cours
 
 #from ls_treso.ls_treso.doctype.decaissement.decaissement import get_decaissement_route
 

@@ -7,7 +7,7 @@ from frappe.model.document import Document
 from frappe.utils import getdate
 from frappe.utils import flt
 import json
-from trésorerie.trésorerie.doctype.devise.devise import get_cours
+from treso.trésorerie.doctype.devise.devise import get_cours
 from erpnext.setup.utils import get_exchange_rate
 
 class Encaissement(Document):
