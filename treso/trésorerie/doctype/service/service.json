@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "field:libell\u00e9",
  "creation": "2024-07-22 14:20:41.530666",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -11,15 +12,17 @@
   {
    "fieldname": "libell\u00e9",
    "fieldtype": "Data",
-   "label": "Libell\u00e9"
+   "label": "Libell\u00e9",
+   "unique": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-07-22 14:21:13.416851",
+ "modified": "2024-08-02 13:57:51.494030",
  "modified_by": "Administrator",
  "module": "Tr\u00e9sorerie",
  "name": "Service",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {

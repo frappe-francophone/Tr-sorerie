@@ -1,0 +1,72 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-08-02 16:23:19.853278",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "type_tiers",
+  "transf\u00e9rer",
+  "column_break_gwpd",
+  "mode_transfert",
+  "section_break_5su2",
+  "table"
+ ],
+ "fields": [
+  {
+   "fieldname": "type_tiers",
+   "fieldtype": "Select",
+   "label": "Type Tiers",
+   "options": "AUTRES\nSALARIE\nFOURNISSEUR\nCLIENT\nETUDIANT\nPATIENT\nTIERS DIVERS"
+  },
+  {
+   "fieldname": "mode_transfert",
+   "fieldtype": "Select",
+   "label": "Mode Transfert",
+   "options": "Individuel\nTout"
+  },
+  {
+   "bold": 1,
+   "fieldname": "transf\u00e9rer",
+   "fieldtype": "Button",
+   "label": "Transf\u00e9rer"
+  },
+  {
+   "fieldname": "section_break_5su2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "table",
+   "fieldtype": "Table",
+   "label": "Details Transfert Tiers",
+   "options": "Details Transfert Tiers"
+  },
+  {
+   "fieldname": "column_break_gwpd",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-08-02 16:34:39.761709",
+ "modified_by": "Administrator",
+ "module": "Tr\u00e9sorerie",
+ "name": "Transfert Tiers",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

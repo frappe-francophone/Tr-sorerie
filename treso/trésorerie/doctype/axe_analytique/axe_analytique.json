@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "field:libelle",
  "creation": "2024-07-30 14:06:58.088976",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -13,26 +14,33 @@
   {
    "fieldname": "libelle",
    "fieldtype": "Data",
-   "label": "Libelle"
+   "label": "Libelle",
+   "reqd": 1,
+   "unique": 1
   },
   {
    "fieldname": "type",
    "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Type",
-   "options": "Axe 1\nAxe 2\nAxe 3\nAxe 4\nAxe 5\nAxe 6\nAxe 7\nAxe 8\nAxe 9\nAxe 10"
+   "options": "Axe 1\nAxe 2\nAxe 3\nAxe 4\nAxe 5\nAxe 6\nAxe 7\nAxe 8\nAxe 9\nAxe 10",
+   "reqd": 1
   },
   {
    "fieldname": "correspondance",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Correspondance"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-07-30 14:12:03.179140",
+ "modified": "2024-08-02 15:00:12.562851",
  "modified_by": "Administrator",
  "module": "Tr\u00e9sorerie",
  "name": "Axe Analytique",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {

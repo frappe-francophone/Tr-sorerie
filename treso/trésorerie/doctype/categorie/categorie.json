@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "field:categorie",
  "creation": "2024-07-22 14:22:22.063986",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -12,9 +13,11 @@
   {
    "fieldname": "categorie",
    "fieldtype": "Data",
-   "label": "Categorie"
+   "label": "Categorie",
+   "unique": 1
   },
   {
+   "description": "Ceci permettra de filtrer les cat\u00e9gorie par classes",
    "fieldname": "classe",
    "fieldtype": "Select",
    "label": "Classe",
@@ -23,10 +26,11 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-07-30 12:51:31.811889",
+ "modified": "2024-08-02 13:48:36.231332",
  "modified_by": "Administrator",
  "module": "Tr\u00e9sorerie",
  "name": "Categorie",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {

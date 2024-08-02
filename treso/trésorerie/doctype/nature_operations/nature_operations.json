@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "field:nature",
  "creation": "2024-07-22 14:30:54.650571",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -9,10 +10,13 @@
   "type_operation",
   "nature",
   "compte_comptable",
+  "account_currency",
+  "services",
   "column_break_nzwc",
   "tiers",
   "justifiable",
   "famille",
+  "est_valide",
   "section_break_x6vp",
   "solde_initial",
   "column_break_hze7",
@@ -24,25 +28,32 @@
   {
    "fieldname": "societe",
    "fieldtype": "Link",
+   "in_standard_filter": 1,
    "label": "Societe",
    "options": "Societe"
   },
   {
    "fieldname": "type_operation",
    "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Type Operation",
    "options": "Encaissement\nD\u00e9caissement"
   },
   {
    "fieldname": "nature",
    "fieldtype": "Data",
-   "label": "Nature"
+   "label": "Nature",
+   "reqd": 1,
+   "unique": 1
   },
   {
    "fieldname": "compte_comptable",
    "fieldtype": "Link",
+   "in_standard_filter": 1,
    "label": "Compte Comptable",
-   "options": "Compte General"
+   "options": "Compte General",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_nzwc",
@@ -51,12 +62,14 @@
   {
    "fieldname": "tiers",
    "fieldtype": "Select",
+   "in_standard_filter": 1,
    "label": "Tiers",
    "options": "Oui\nNon"
   },
   {
    "fieldname": "justifiable",
    "fieldtype": "Select",
+   "in_standard_filter": 1,
    "label": "Justifiable",
    "options": "Oui\nNon"
   },
@@ -95,14 +108,33 @@
    "fieldname": "echange",
    "fieldtype": "Check",
    "label": "Echange"
+  },
+  {
+   "fetch_from": "compte_comptable.account_currency",
+   "fieldname": "account_currency",
+   "fieldtype": "Data",
+   "label": "Account Currency"
+  },
+  {
+   "fieldname": "services",
+   "fieldtype": "Link",
+   "label": "Services",
+   "options": "Service"
+  },
+  {
+   "default": "0",
+   "fieldname": "est_valide",
+   "fieldtype": "Check",
+   "label": "Actif"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-07-22 14:45:23.469074",
+ "modified": "2024-08-02 14:34:18.396232",
  "modified_by": "Administrator",
  "module": "Tr\u00e9sorerie",
  "name": "Nature Operations",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {

@@ -1,25 +1,72 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "field:compte",
  "creation": "2024-07-17 16:35:49.357163",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "compte"
+  "compte",
+  "designation",
+  "categorie",
+  "section",
+  "type",
+  "societe",
+  "correspondance"
  ],
  "fields": [
   {
    "fieldname": "compte",
    "fieldtype": "Data",
-   "label": "compte"
+   "in_list_view": 1,
+   "label": "Code",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "designation",
+   "fieldtype": "Data",
+   "label": "Designation"
+  },
+  {
+   "fieldname": "categorie",
+   "fieldtype": "Select",
+   "label": "Categorie",
+   "options": "EBP\nAUTRES"
+  },
+  {
+   "fieldname": "section",
+   "fieldtype": "Link",
+   "label": "Axe",
+   "options": "Axe Analytique"
+  },
+  {
+   "fetch_from": "section.type",
+   "fieldname": "type",
+   "fieldtype": "Data",
+   "label": "Type"
+  },
+  {
+   "fieldname": "societe",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "societe",
+   "options": "Societe",
+   "reqd": 1
+  },
+  {
+   "fieldname": "correspondance",
+   "fieldtype": "Data",
+   "label": "Correspondance"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-07-17 16:37:06.979946",
+ "modified": "2024-08-02 15:16:08.013353",
  "modified_by": "Administrator",
  "module": "Tr\u00e9sorerie",
  "name": "Section Analytique",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {

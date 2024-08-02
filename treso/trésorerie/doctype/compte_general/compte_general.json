@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "field:compte",
  "creation": "2024-07-17 14:19:07.284826",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -10,19 +11,25 @@
   "ventilable",
   "collectif",
   "controle",
-  "societe"
+  "societe",
+  "account_currency"
  ],
  "fields": [
   {
    "fieldname": "compte",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Compte",
-   "options": "Account"
+   "options": "Account",
+   "reqd": 1,
+   "unique": 1
   },
   {
    "fieldname": "designation",
    "fieldtype": "Data",
-   "label": "Designation"
+   "in_list_view": 1,
+   "label": "Designation",
+   "reqd": 1
   },
   {
    "default": "0",
@@ -45,15 +52,22 @@
    "fieldname": "societe",
    "fieldtype": "Link",
    "label": "Societe",
-   "options": "Societe"
+   "options": "Societe",
+   "reqd": 1
+  },
+  {
+   "fieldname": "account_currency",
+   "fieldtype": "Data",
+   "label": "Account Currency"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-07-22 14:24:04.996485",
+ "modified": "2024-08-02 14:32:15.804862",
  "modified_by": "Administrator",
  "module": "Tr\u00e9sorerie",
  "name": "Compte General",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {
