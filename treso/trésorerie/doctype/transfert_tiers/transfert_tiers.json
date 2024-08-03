@@ -5,31 +5,23 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "type_tiers",
-  "transf\u00e9rer",
-  "column_break_gwpd",
+  "societe",
+  "section_break_3ddf",
   "mode_transfert",
+  "column_break_gwpd",
+  "type_doc",
+  "section_break_w55w",
+  "tiers",
   "section_break_5su2",
+  "recharger",
   "table"
  ],
  "fields": [
-  {
-   "fieldname": "type_tiers",
-   "fieldtype": "Select",
-   "label": "Type Tiers",
-   "options": "AUTRES\nSALARIE\nFOURNISSEUR\nCLIENT\nETUDIANT\nPATIENT\nTIERS DIVERS"
-  },
   {
    "fieldname": "mode_transfert",
    "fieldtype": "Select",
    "label": "Mode Transfert",
    "options": "Individuel\nTout"
-  },
-  {
-   "bold": 1,
-   "fieldname": "transf\u00e9rer",
-   "fieldtype": "Button",
-   "label": "Transf\u00e9rer"
   },
   {
    "fieldname": "section_break_5su2",
@@ -44,12 +36,46 @@
   {
    "fieldname": "column_break_gwpd",
    "fieldtype": "Column Break"
+  },
+  {
+   "bold": 1,
+   "fieldname": "recharger",
+   "fieldtype": "Button",
+   "label": "Recharger"
+  },
+  {
+   "fieldname": "section_break_w55w",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "type_doc",
+   "fieldtype": "Link",
+   "label": "Type de document",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "tiers",
+   "fieldtype": "Dynamic Link",
+   "label": "Tiers",
+   "options": "type_doc"
+  },
+  {
+   "fieldname": "societe",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Societe",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_3ddf",
+   "fieldtype": "Section Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2024-08-02 16:34:39.761709",
+ "modified": "2024-08-02 19:29:17.354382",
  "modified_by": "Administrator",
  "module": "Tr\u00e9sorerie",
  "name": "Transfert Tiers",

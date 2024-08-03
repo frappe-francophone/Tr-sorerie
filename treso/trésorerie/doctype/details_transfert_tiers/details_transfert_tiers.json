@@ -54,7 +54,7 @@
    "fieldname": "type",
    "fieldtype": "Select",
    "label": "Type",
-   "options": "AUTRES\nSALARIE\nFOURNISSEUR\nCLIENT\nTIERS DIVERS",
+   "options": "SALARIE\nFOURNISSEUR\nCLIENT\nETUDIANT\nPATIENT\nTIERS DIVERS",
    "reqd": 1
   },
   {
@@ -89,7 +89,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-08-02 16:22:32.551476",
+ "modified": "2024-08-03 13:25:10.475742",
  "modified_by": "Administrator",
  "module": "Tr\u00e9sorerie",
  "name": "Details Transfert Tiers",

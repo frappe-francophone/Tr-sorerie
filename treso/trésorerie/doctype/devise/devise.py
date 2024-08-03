@@ -38,3 +38,4 @@ def get_cours(reference, devise):
 			WHERE v.reference = '%(reference)s' AND v.devise = '%(devise)s'
 		""" % {"reference":reference, "devise":devise}, as_dict = 1
 	)
+	

@@ -28,8 +28,11 @@
  "fields": [
   {
    "fieldname": "raison_sociale",
-   "fieldtype": "Data",
-   "label": "Raison Sociale"
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Raison Sociale",
+   "options": "Company",
+   "reqd": 1
   },
   {
    "fieldname": "ville",
@@ -132,7 +135,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-07-17 14:35:12.801619",
+ "modified": "2024-08-03 09:48:02.659157",
  "modified_by": "Administrator",
  "module": "Tr\u00e9sorerie",
  "name": "Societe",
