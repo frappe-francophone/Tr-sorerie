@@ -170,7 +170,7 @@ frappe.ui.form.on("Transfert Tiers", {
         let my_socite = frm.selected_doc.societe;
         let type_doc = frm.selected_doc.type_doc;
 
-        console.log(type_doc);
+        
 
         if ( type_doc === 'Customer' ) {
             frappe.call({
@@ -180,15 +180,41 @@ frappe.ui.form.on("Transfert Tiers", {
                 },
                 callback: function(r) {
                     if (r.message.length > 0) {
+                        console.log(type_doc);
                         r.message.forEach(function(item) {
-                            frm.add_child('table', {
-                                'code': item.name,
-                                'type': 'CLIENT',
-                                'intitule': item.name,
-                                'email': item.email,
-                                'collectif': item.account,
-                                'societe': item.company
+                            console.log(type_doc);
+                            frappe.call({
+                                method: "treso.trésorerie.doctype.transfert_tiers.tier_sent.get_tiers_code",
+                                args: {
+                                    code: item.name
+                                },
+                                callback: function(response) {
+                                    const data = response.message;
+                                    if (data && data.length > 0) {
+                                        data.forEach(function(row) {
+                                            console.log(`Code: ${row.code}`);
+                                        });
+                                        resolve(); 
+                                    } else {
+                                                                                
+                                        frm.add_child('table', {
+                                            'code': item.name,
+                                            'type': 'CLIENT',
+                                            'intitule': item.name,
+                                            'email': item.email,
+                                            'collectif': item.account,
+                                            'societe': item.company
+                                        });
+                                        
+                                    }
+                                },
+                                error: function(err) {
+                                    console.error('Erreur lors de la récupération des codes:', err);
+                                    frappe.msgprint(__('Erreur: ', [err]));
+                                    resolve(); 
+                                }
                             });
+                            
                         });
                         frm.refresh_field('table');
                         frm.refresh();
@@ -205,16 +231,41 @@ frappe.ui.form.on("Transfert Tiers", {
                 callback: function(r) {
                     if (r.message.length > 0) {
                         r.message.forEach(function(item) {
-                            frm.add_child('table', {
-                                'code': item.employee,
-                                'type': 'SALARIE',
-                                'intitule': item.employee_name,
-                                'email': item.personal_email,
-                                'collectif': item.default_employee_account,
-                                'telephone' : item.employee_number,
-                                'societe': item.company,
-                                'adresse' : item.current_address
+
+                            frappe.call({
+                                method: "treso.trésorerie.doctype.transfert_tiers.tier_sent.get_tiers_code",
+                                args: {
+                                    code: item.employee
+                                },
+                                callback: function(response) {
+                                    const data = response.message;
+                                    if (data && data.length > 0) {
+                                        data.forEach(function(row) {
+                                            console.log(`Code: ${row.code}`);
+                                        });
+                                        resolve(); 
+                                    } else {
+                                        
+                                        frm.add_child('table', {
+                                            'code': item.employee,
+                                            'type': 'SALARIE',
+                                            'intitule': item.employee_name,
+                                            'email': item.personal_email,
+                                            'collectif': item.default_employee_account,
+                                            'telephone' : item.employee_number,
+                                            'societe': item.company,
+                                            'adresse' : item.current_address
+                                        });
+
+                                    }
+                                },
+                                error: function(err) {
+                                    console.error('Erreur lors de la récupération des codes:', err);
+                                    frappe.msgprint(__('Erreur: ', [err]));
+                                    resolve(); 
+                                }
                             });
+
                         });
                         frm.refresh_field('table');
                         frm.refresh();
@@ -233,19 +284,44 @@ frappe.ui.form.on("Transfert Tiers", {
                 callback: function(r) {
                     if (r.message.length > 0) {
                         r.message.forEach(function(item) {
-                            console.log(item.name);
-                            console.log(item.student_name);
-                            console.log(item.student_email_id);
-                            frm.add_child('table', {
-                                'code': item.name,
-                                'type': 'ETUDIANT',
-                                'intitule': item.student_name,
-                                'email': item.student_email_id,
-                                'collectif': item.default_student_account,
-                                'telephone' : item.student_mobile_number,
-                                'societe': item.company_name,
-                                'adresse' : item.address_line_1
+
+                            frappe.call({
+                                method: "treso.trésorerie.doctype.transfert_tiers.tier_sent.get_tiers_code",
+                                args: {
+                                    code: item.name
+                                },
+                                callback: function(response) {
+                                    const data = response.message;
+                                    if (data && data.length > 0) {
+                                        data.forEach(function(row) {
+                                            console.log(`Code: ${row.code}`);
+                                        });
+                                        resolve(); 
+                                    } else {
+                                                                                
+                                        console.log(item.name);
+                                        console.log(item.student_name);
+                                        console.log(item.student_email_id);
+                                        frm.add_child('table', {
+                                            'code': item.name,
+                                            'type': 'ETUDIANT',
+                                            'intitule': item.student_name,
+                                            'email': item.student_email_id,
+                                            'collectif': item.default_student_account,
+                                            'telephone' : item.student_mobile_number,
+                                            'societe': item.company_name,
+                                            'adresse' : item.address_line_1
+                                        });
+                                        
+                                    }
+                                },
+                                error: function(err) {
+                                    console.error('Erreur lors de la récupération des codes:', err);
+                                    frappe.msgprint(__('Erreur: ', [err]));
+                                    resolve(); 
+                                }
                             });
+                            
                         });
                         frm.refresh_field('table');
                         frm.refresh();
@@ -263,16 +339,41 @@ frappe.ui.form.on("Transfert Tiers", {
                 callback: function(r) {
                     if (r.message.length > 0) {
                         r.message.forEach(function(item) {
-                            frm.add_child('table', {
-                                'code': item.supplier_name,
-                                'type': 'FOURNISSEUR',
-                                'intitule': item.supplier_name,
-                                'email': item.email_id,
-                                'collectif': item.default_supplier_account,
-                                'telephone' : item.phone,
-                                'societe': item.company_name,
-                                'adresse' : item.address_line1
+
+                            frappe.call({
+                                method: "treso.trésorerie.doctype.transfert_tiers.tier_sent.get_tiers_code",
+                                args: {
+                                    code: item.supplier_name
+                                },
+                                callback: function(response) {
+                                    const data = response.message;
+                                    if (data && data.length > 0) {
+                                        data.forEach(function(row) {
+                                            console.log(`Code: ${row.code}`);
+                                        });
+                                        resolve(); 
+                                    } else {
+                                        
+                                        frm.add_child('table', {
+                                            'code': item.supplier_name,
+                                            'type': 'FOURNISSEUR',
+                                            'intitule': item.supplier_name,
+                                            'email': item.email_id,
+                                            'collectif': item.default_supplier_account,
+                                            'telephone' : item.phone,
+                                            'societe': item.company_name,
+                                            'adresse' : item.address_line1
+                                        });
+                                        
+                                    }
+                                },
+                                error: function(err) {
+                                    console.error('Erreur lors de la récupération des codes:', err);
+                                    frappe.msgprint(__('Erreur: ', [err]));
+                                    resolve(); 
+                                }
                             });
+                            
                         });
                         frm.refresh_field('table');
                         frm.refresh();
@@ -290,15 +391,40 @@ frappe.ui.form.on("Transfert Tiers", {
                 callback: function(r) {
                     if (r.message.length > 0) {
                         r.message.forEach(function(item) {
-                            frm.add_child('table', {
-                                'code': item.name,
-                                'type': 'PATIENT',
-                                'intitule': item.name,
-                                'email': item.email,
-                                'collectif': item.default_patient_account,
-                                'telephone' : item.mobile,
-                                'societe': item.company_name                               
+
+                            frappe.call({
+                                method: "treso.trésorerie.doctype.transfert_tiers.tier_sent.get_tiers_code",
+                                args: {
+                                    code: item.name
+                                },
+                                callback: function(response) {
+                                    const data = response.message;
+                                    if (data && data.length > 0) {
+                                        data.forEach(function(row) {
+                                            console.log(`Code: ${row.code}`);
+                                        });
+                                        resolve(); 
+                                    } else {
+                                        
+                                        frm.add_child('table', {
+                                            'code': item.name,
+                                            'type': 'PATIENT',
+                                            'intitule': item.name,
+                                            'email': item.email,
+                                            'collectif': item.default_patient_account,
+                                            'telephone' : item.mobile,
+                                            'societe': item.company_name                               
+                                        });
+                                        
+                                    }
+                                },
+                                error: function(err) {
+                                    console.error('Erreur lors de la récupération des codes:', err);
+                                    frappe.msgprint(__('Erreur: ', [err]));
+                                    resolve(); 
+                                }
                             });
+                            
                         });
                         frm.refresh_field('table');
                         frm.refresh();
