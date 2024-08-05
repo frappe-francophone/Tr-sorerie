@@ -172,17 +172,15 @@ frappe.ui.form.on("Transfert Tiers", {
 
         
 
-        if ( type_doc === 'Customer' ) {
+        if (type_doc === 'Customer') {
             frappe.call({
                 method: "treso.trésorerie.doctype.transfert_tiers.tier_sent.get_customers_transferts",
                 args: {
                     'my_socite': my_socite
                 },
                 callback: function(r) {
-                    if (r.message.length > 0) {
-                        console.log(type_doc);
+                    if (r.message && r.message.length > 0) {
                         r.message.forEach(function(item) {
-                            console.log(type_doc);
                             frappe.call({
                                 method: "treso.trésorerie.doctype.transfert_tiers.tier_sent.get_tiers_code",
                                 args: {
@@ -194,9 +192,7 @@ frappe.ui.form.on("Transfert Tiers", {
                                         data.forEach(function(row) {
                                             console.log(`Code: ${row.code}`);
                                         });
-                                        resolve(); 
                                     } else {
-                                                                                
                                         frm.add_child('table', {
                                             'code': item.name,
                                             'type': 'CLIENT',
@@ -205,23 +201,27 @@ frappe.ui.form.on("Transfert Tiers", {
                                             'collectif': item.account,
                                             'societe': item.company
                                         });
-                                        
+                                        frm.refresh_field('table');
                                     }
                                 },
                                 error: function(err) {
                                     console.error('Erreur lors de la récupération des codes:', err);
                                     frappe.msgprint(__('Erreur: ', [err]));
-                                    resolve(); 
                                 }
                             });
-                            
                         });
                         frm.refresh_field('table');
-                        frm.refresh();
+                    } else {
+                        frappe.msgprint(__('Aucun transfert trouvé pour le client.'));
                     }
+                },
+                error: function(err) {
+                    console.error('Erreur lors de la récupération des transferts:', err);
+                    frappe.msgprint(__('Erreur: ', [err]));
                 }
             });
         }
+        
         if ( type_doc === 'Employee' ) {
             frappe.call({
                 method: "treso.trésorerie.doctype.transfert_tiers.tier_sent.get_Employee_transferts",
