@@ -14,68 +14,148 @@ frappe.ui.form.on("Transfert Tiers", {
                     message: __('Le champ Société est requis.')
                 });
             } else {
-                let fiend = 0;
-                let promises = []; // Tableau pour stocker les promesses
-        
-                frm.doc.table.forEach(function(item) {
-                    let promise = new Promise((resolve) => {
+                
+                let my_socite = frm.selected_doc.societe;
+                let type_doc = frm.selected_doc.type_doc;
+
+                if (frm.doc.mode_transfert === 'Individuel') {
+                    
+                    let fiend = 0;
+                    let promises = []; // Tableau pour stocker les promesses
+
+                    if (type_doc === 'Customer') {
                         frappe.call({
-                            method: "treso.trésorerie.doctype.transfert_tiers.tier_sent.get_tiers_code",
+                            method: "treso.trésorerie.doctype.transfert_tiers.tiers_saved.get_customers_transferts_individuel",
                             args: {
-                                code: item.code
+                                'my_socite': my_socite,
+                                'tiers' : frm.doc.tiers
                             },
-                            callback: function(response) {
-                                const data = response.message;
-                                if (data && data.length > 0) {
-                                    data.forEach(function(row) {
-                                        console.log(`Code: ${row.code}`);
-                                    });
-                                    resolve(); // Résoudre la promesse
+                            callback: function(r) {
+                                if (r.message && r.message.length > 0) {
+
+                                        frappe.call({
+                                            method: "treso.trésorerie.doctype.transfert_tiers.tier_sent.get_tiers_code",
+                                            args: {
+                                                code: r.message[0].name
+                                            },
+                                            callback: function(response) {
+                                                const data = response.message;
+                                                if (data && data.length > 0) {
+                                                    data.forEach(function(row) {
+                                                        console.log(`Code: ${row.code}`);
+                                                    });
+                                                } else {
+                                                    let promise = new Promise((resolve) => {
+                                                        let doctype = "Tiers";
+                                                        let tiers = frappe.model.get_new_doc(doctype);
+                                                       
+                                                        tiers.code = r.message[0].name;
+                                                        tiers.type = 'CLIENT';
+                                                        tiers.intitule = r.message[0].name;
+                                                        tiers.email = r.message[0].email;
+                                                        tiers.collectif = r.message[0].account;
+                                                        tiers.telephone = '';
+                                                        tiers.societe = r.message[0].company;  
+                                                        tiers.adresse = '';
+                                
+                                                        frappe.db.insert(tiers).then(function(doc) {
+                                                            if (doc) {
+                                                                fiend++;
+                                                                console.log(`Code: ${fiend}`);
+                                                            }
+                                                            resolve(); 
+                                                        });
+                                                    });
+                                                }
+                                            },
+                                            error: function(err) {
+                                                console.error('Erreur lors de la récupération des codes:', err);
+                                                frappe.msgprint(__('Erreur: ', [err]));
+                                            }
+                                        });
+                                  
                                 } else {
-                                    let doctype = "Tiers";
-                                    let tiers = frappe.model.get_new_doc(doctype);
-        
-                                    tiers.code = item.code;
-                                    tiers.type = item.type;
-                                    tiers.intitule = item.intitule;
-                                    tiers.email = item.email;
-                                    tiers.collectif = item.collectif;
-                                    tiers.telephone = item.telephone;
-                                    tiers.societe = frm.doc.societe;  
-                                    tiers.adresse = item.adresse;
-        
-                                    frappe.db.insert(tiers).then(function(doc) {
-                                        if (doc) {
-                                            fiend++;
-                                            console.log(`Code: ${fiend}`);
-                                        }
-                                        resolve(); // Résoudre la promesse après l'insertion
-                                    });
+                                    frappe.msgprint(__('Aucun transfert trouvé pour le client.'));
                                 }
                             },
                             error: function(err) {
-                                console.error('Erreur lors de la récupération des codes:', err);
+                                console.error('Erreur lors de la récupération des transferts:', err);
                                 frappe.msgprint(__('Erreur: ', [err]));
-                                resolve(); // Résoudre la promesse même en cas d'erreur
                             }
                         });
-                    });
-        
-                    promises.push(promise); // Ajouter la promesse au tableau
-                });
-        
-                // Attendre que toutes les promesses soient résolues
-                Promise.all(promises).then(function() {
-                    if (fiend > 0) {
-                        if (fiend >= 2) {
-                            console.log(`Yes: ${fiend}`);
-                            frappe.msgprint(__(`${fiend} tiers enregistrés`));
-                        } else {
-                            frappe.msgprint(__(`${fiend} tier enregistré`));
-                            console.log(`No: ${fiend}`);
-                        }
                     }
-                });
+
+                    
+                    promises.push(promise); 
+
+                } else {
+                    
+                    let fiend = 0;
+                    let promises = []; // Tableau pour stocker les promesses
+            
+                    frm.doc.table.forEach(function(item) {
+                        let promise = new Promise((resolve) => {
+                            frappe.call({
+                                method: "treso.trésorerie.doctype.transfert_tiers.tier_sent.get_tiers_code",
+                                args: {
+                                    code: item.code
+                                },
+                                callback: function(response) {
+                                    const data = response.message;
+                                    if (data && data.length > 0) {
+                                        data.forEach(function(row) {
+                                            console.log(`Code: ${row.code}`);
+                                        });
+                                        resolve(); // Résoudre la promesse
+                                    } else {
+                                        let doctype = "Tiers";
+                                        let tiers = frappe.model.get_new_doc(doctype);
+            
+                                        tiers.code = item.code;
+                                        tiers.type = item.type;
+                                        tiers.intitule = item.intitule;
+                                        tiers.email = item.email;
+                                        tiers.collectif = item.collectif;
+                                        tiers.telephone = item.telephone;
+                                        tiers.societe = frm.doc.societe;  
+                                        tiers.adresse = item.adresse;
+            
+                                        frappe.db.insert(tiers).then(function(doc) {
+                                            if (doc) {
+                                                fiend++;
+                                                console.log(`Code: ${fiend}`);
+                                            }
+                                            resolve(); // Résoudre la promesse après l'insertion
+                                        });
+                                    }
+                                },
+                                error: function(err) {
+                                    console.error('Erreur lors de la récupération des codes:', err);
+                                    frappe.msgprint(__('Erreur: ', [err]));
+                                    resolve(); // Résoudre la promesse même en cas d'erreur
+                                }
+                            });
+                        });
+            
+                        promises.push(promise); // Ajouter la promesse au tableau
+                    });
+            
+                    // Attendre que toutes les promesses soient résolues
+                    Promise.all(promises).then(function() {
+                        if (fiend > 0) {
+                            if (fiend >= 2) {
+                                console.log(`Yes: ${fiend}`);
+                                frappe.msgprint(__(`${fiend} tiers enregistrés`));
+                            } else {
+                                frappe.msgprint(__(`${fiend} tier enregistré`));
+                                console.log(`No: ${fiend}`);
+                            }
+                        }
+                    });
+                    
+                }
+
+                
             }
         }).addClass('btn btn-primary text-white');
         
@@ -170,8 +250,8 @@ frappe.ui.form.on("Transfert Tiers", {
         let my_socite = frm.selected_doc.societe;
         let type_doc = frm.selected_doc.type_doc;
 
+        //########################### RECHARGE DES CLIENTS ############################################################
         
-
         if (type_doc === 'Customer') {
             frappe.call({
                 method: "treso.trésorerie.doctype.transfert_tiers.tier_sent.get_customers_transferts",
@@ -222,16 +302,18 @@ frappe.ui.form.on("Transfert Tiers", {
             });
         }
         
-        if ( type_doc === 'Employee' ) {
+
+        //########################### RECHARGE DES EMPLOYEES ############################################################
+        
+        if (type_doc === 'Employee') {
             frappe.call({
-                method: "treso.trésorerie.doctype.transfert_tiers.tier_sent.get_Employee_transferts",
+                method: "treso.trésorerie.doctype.transfert_tiers.tier_sent.get_customers_transferts",
                 args: {
                     'my_socite': my_socite
                 },
                 callback: function(r) {
-                    if (r.message.length > 0) {
+                    if (r.message && r.message.length > 0) {
                         r.message.forEach(function(item) {
-
                             frappe.call({
                                 method: "treso.trésorerie.doctype.transfert_tiers.tier_sent.get_tiers_code",
                                 args: {
@@ -243,9 +325,7 @@ frappe.ui.form.on("Transfert Tiers", {
                                         data.forEach(function(row) {
                                             console.log(`Code: ${row.code}`);
                                         });
-                                        resolve(); 
                                     } else {
-                                        
                                         frm.add_child('table', {
                                             'code': item.employee,
                                             'type': 'SALARIE',
@@ -256,35 +336,37 @@ frappe.ui.form.on("Transfert Tiers", {
                                             'societe': item.company,
                                             'adresse' : item.current_address
                                         });
-
                                     }
                                 },
                                 error: function(err) {
                                     console.error('Erreur lors de la récupération des codes:', err);
                                     frappe.msgprint(__('Erreur: ', [err]));
-                                    resolve(); 
                                 }
                             });
-
                         });
                         frm.refresh_field('table');
-                        frm.refresh();
+                    } else {
+                        frappe.msgprint(__('Aucun transfert trouvé pour le client.'));
                     }
+                },
+                error: function(err) {
+                    console.error('Erreur lors de la récupération des transferts:', err);
+                    frappe.msgprint(__('Erreur: ', [err]));
                 }
             });
         }
-
-        if ( type_doc === 'Student' ) {
+        
+        //########################### RECHARGE DES ELEVES OU ETUDIANTS ############################################################
+        
+        if (type_doc === 'Student') {
             frappe.call({
-                
-                method: "treso.trésorerie.doctype.transfert_tiers.tier_sent.get_Student_transferts",
+                method: "treso.trésorerie.doctype.transfert_tiers.tier_sent.get_customers_transferts",
                 args: {
                     'my_socite': my_socite
                 },
                 callback: function(r) {
-                    if (r.message.length > 0) {
+                    if (r.message && r.message.length > 0) {
                         r.message.forEach(function(item) {
-
                             frappe.call({
                                 method: "treso.trésorerie.doctype.transfert_tiers.tier_sent.get_tiers_code",
                                 args: {
@@ -296,9 +378,8 @@ frappe.ui.form.on("Transfert Tiers", {
                                         data.forEach(function(row) {
                                             console.log(`Code: ${row.code}`);
                                         });
-                                        resolve(); 
                                     } else {
-                                                                                
+
                                         console.log(item.name);
                                         console.log(item.student_name);
                                         console.log(item.student_email_id);
@@ -312,34 +393,38 @@ frappe.ui.form.on("Transfert Tiers", {
                                             'societe': item.company_name,
                                             'adresse' : item.address_line_1
                                         });
-                                        
                                     }
                                 },
                                 error: function(err) {
                                     console.error('Erreur lors de la récupération des codes:', err);
                                     frappe.msgprint(__('Erreur: ', [err]));
-                                    resolve(); 
                                 }
                             });
-                            
                         });
                         frm.refresh_field('table');
-                        frm.refresh();
+                    } else {
+                        frappe.msgprint(__('Aucun transfert trouvé pour le client.'));
                     }
+                },
+                error: function(err) {
+                    console.error('Erreur lors de la récupération des transferts:', err);
+                    frappe.msgprint(__('Erreur: ', [err]));
                 }
             });
         }
         
-        if ( type_doc === 'Supplier' ) {
+
+        //########################### RECHARGE DES FOURNISSEURS ############################################################
+        
+        if (type_doc === 'Supplier') {
             frappe.call({
-                method: "treso.trésorerie.doctype.transfert_tiers.tier_sent.get_Supliers_transferts",
+                method: "treso.trésorerie.doctype.transfert_tiers.tier_sent.get_customers_transferts",
                 args: {
                     'my_socite': my_socite
                 },
                 callback: function(r) {
-                    if (r.message.length > 0) {
+                    if (r.message && r.message.length > 0) {
                         r.message.forEach(function(item) {
-
                             frappe.call({
                                 method: "treso.trésorerie.doctype.transfert_tiers.tier_sent.get_tiers_code",
                                 args: {
@@ -351,9 +436,8 @@ frappe.ui.form.on("Transfert Tiers", {
                                         data.forEach(function(row) {
                                             console.log(`Code: ${row.code}`);
                                         });
-                                        resolve(); 
                                     } else {
-                                        
+
                                         frm.add_child('table', {
                                             'code': item.supplier_name,
                                             'type': 'FOURNISSEUR',
@@ -364,34 +448,38 @@ frappe.ui.form.on("Transfert Tiers", {
                                             'societe': item.company_name,
                                             'adresse' : item.address_line1
                                         });
-                                        
                                     }
                                 },
                                 error: function(err) {
                                     console.error('Erreur lors de la récupération des codes:', err);
                                     frappe.msgprint(__('Erreur: ', [err]));
-                                    resolve(); 
                                 }
                             });
-                            
                         });
                         frm.refresh_field('table');
-                        frm.refresh();
+                    } else {
+                        frappe.msgprint(__('Aucun transfert trouvé pour le client.'));
                     }
+                },
+                error: function(err) {
+                    console.error('Erreur lors de la récupération des transferts:', err);
+                    frappe.msgprint(__('Erreur: ', [err]));
                 }
             });
         }
+        
 
-        if ( type_doc === 'Patient' ) {
+        //########################### RECHARGE DES PATIENTS OU MALADIES ############################################################
+        
+        if (type_doc === 'Patient') {
             frappe.call({
-                method: "treso.trésorerie.doctype.transfert_tiers.tier_sent.get_Patients_transferts",
+                method: "treso.trésorerie.doctype.transfert_tiers.tier_sent.get_customers_transferts",
                 args: {
                     'my_socite': my_socite
                 },
                 callback: function(r) {
-                    if (r.message.length > 0) {
+                    if (r.message && r.message.length > 0) {
                         r.message.forEach(function(item) {
-
                             frappe.call({
                                 method: "treso.trésorerie.doctype.transfert_tiers.tier_sent.get_tiers_code",
                                 args: {
@@ -403,9 +491,7 @@ frappe.ui.form.on("Transfert Tiers", {
                                         data.forEach(function(row) {
                                             console.log(`Code: ${row.code}`);
                                         });
-                                        resolve(); 
                                     } else {
-                                        
                                         frm.add_child('table', {
                                             'code': item.name,
                                             'type': 'PATIENT',
@@ -421,18 +507,21 @@ frappe.ui.form.on("Transfert Tiers", {
                                 error: function(err) {
                                     console.error('Erreur lors de la récupération des codes:', err);
                                     frappe.msgprint(__('Erreur: ', [err]));
-                                    resolve(); 
                                 }
                             });
-                            
                         });
                         frm.refresh_field('table');
-                        frm.refresh();
+                    } else {
+                        frappe.msgprint(__('Aucun transfert trouvé pour le client.'));
                     }
+                },
+                error: function(err) {
+                    console.error('Erreur lors de la récupération des transferts:', err);
+                    frappe.msgprint(__('Erreur: ', [err]));
                 }
             });
         }
-        
+                
     }
     
 });

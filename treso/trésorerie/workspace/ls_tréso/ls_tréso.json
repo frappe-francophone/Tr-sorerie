@@ -14,36 +14,6 @@
  "label": "LS Tr\u00e9so",
  "links": [
   {
-   "description": "C'est ici qu'il faut parametrer tout ce qui est li\u00e9 \u00e0 la soci\u00e9t\u00e9",
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Param\u00e9trages G\u00e9n\u00e9raux",
-   "link_count": 2,
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Card Break"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Soci\u00e9t\u00e9",
-   "link_count": 0,
-   "link_to": "Societe",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Devise",
-   "link_count": 0,
-   "link_to": "Devise",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
    "hidden": 0,
    "is_query_report": 0,
    "label": "Comptabilit\u00e9",
@@ -218,9 +188,49 @@
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
+  },
+  {
+   "description": "C'est ici qu'il faut parametrer tout ce qui est li\u00e9 \u00e0 la soci\u00e9t\u00e9",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Param\u00e9trages G\u00e9n\u00e9raux",
+   "link_count": 3,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Soci\u00e9t\u00e9",
+   "link_count": 0,
+   "link_to": "Societe",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Devise",
+   "link_count": 0,
+   "link_to": "Devise",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Transfert Tiers",
+   "link_count": 0,
+   "link_to": "Transfert Tiers",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
   }
  ],
- "modified": "2024-07-31 14:57:35.447982",
+ "modified": "2024-08-05 15:16:20.881199",
  "modified_by": "Administrator",
  "module": "Tr\u00e9sorerie",
  "name": "LS Tr\u00e9so",
